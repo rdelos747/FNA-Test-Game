@@ -63,4 +63,27 @@ namespace test_game {
       base.update();
     }
   }
+
+  public class Player4 : GameObject {
+    int timer = 0;
+    public Player4() { }
+
+    public override void init() {
+      position.Y = 300;
+      base.init();
+    }
+
+    public override void load(ContentManager content) {
+      setSpriteSheet(TextureLoader.Load("test_boy_sheet.png", content), 4, 4);
+      base.load(content);
+    }
+
+    public override void update() {
+      timer++;
+      if (timer % 10 == 0) {
+        currentFrame = (currentFrame == 1 ? 0 : 1);
+      }
+      base.update();
+    }
+  }
 }

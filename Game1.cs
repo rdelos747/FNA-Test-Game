@@ -35,6 +35,7 @@ namespace test_game {
       objects.Add(new Player());
       objects.Add(new Player2());
       objects.Add(new Player3());
+      objects.Add(new Player4());
       loadObjects();
       base.LoadContent();
     }
